@@ -1,0 +1,32 @@
+.logo-web {
+  @extend %logo;
+  padding: 16px 0;
+
+  @media screen and (min-width: $tablet) {
+    padding: 26px 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 25px 0;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+.logo-studio {
+  @include logo-colorizing($black-color);
+}
+
+.footer__logo-web {
+  @extend %logo;
+  display: block;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
+.footer__logo-studio {
+  @include logo-colorizing($main-white-color);
+}

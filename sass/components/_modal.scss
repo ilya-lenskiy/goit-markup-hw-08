@@ -1,0 +1,81 @@
+.modal {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  background-color: $main-white-color;
+  transform: scale(1);
+  opacity: 1;
+  @include animation(transform, opacity);
+}
+.backdrop.is-hidden .modal {
+  transform: scale(1.1);
+  opacity: 0;
+  @include animation(transform, opacity);
+}
+
+.modal {
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    @include animation(transform, opacity);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+  }
+}
+.backdrop.is-hidden .modal {
+  @media screen and (min-width: $tablet) {
+    transform: translate(-50%, -50%) scale(1.2);
+    @include animation(transform, opacity);
+  }
+}
+// @media screen and (min-width: $desktop) {
+//   width: 528px;
+
+//   // .backdrop.is-hidden .modal {
+//   //   transform: translate(-50%, -25%) scale(1.2);
+//   //   @include animation(transform, opacity);
+//   // }
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: $bold-font-weight;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: $main-dark-color;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  @extend .container-flex;
+  @extend %centering;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: $black-color;
+  background-color: $main-white-color;
+  @include bordered(rgba(0, 0, 0, 0.1));
+  cursor: pointer;
+}
+
+.close-icon {
+  fill: currentColor;
+  @include animation(fill);
+}
+
+.close-btn:hover .close-icon,
+.close-btn:focus .close-icon {
+  fill: $accent;
+}

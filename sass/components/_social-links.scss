@@ -1,0 +1,91 @@
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__item {
+    margin-bottom: 0;
+    background-color: $main-white-color;
+    color: $social-link-color;
+
+    @include animation(color, background-color);
+  }
+
+  &__link {
+    display: flex;
+    @extend %centering;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    background-color: $main-white-color;
+    color: $social-link-color;
+
+    @include animation(color, background-color);
+  }
+
+  &__icon {
+    fill: currentColor;
+    @include animation(fill);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent;
+    color: $main-white-color;
+  }
+
+  &__icon:hover,
+  &__icon:focus {
+    fill: $main-white-color;
+  }
+}
+
+.join-us {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+  }
+
+  &__lable {
+    @extend %footer-label;
+  }
+}
+
+.footer__social-links {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
+  &--link {
+    @extend .social-links__link;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $main-white-color;
+
+    @include animation(background-color);
+  }
+}
+
+.footer__social-links--item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-links__link--bgcolored {
+  @extend .social-links__link;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $main-white-color;
+
+  @include animation(background-color);
+}

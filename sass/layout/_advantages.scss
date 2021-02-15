@@ -1,0 +1,58 @@
+.section__title--hidden {
+  @extend %visually-hidden;
+}
+
+.advantages {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (max-width: $mobile) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 60px) / 2);
+      margin: 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 120px) / 4);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    height: 120px;
+    border-radius: $border-radius-btn;
+    background: $light-background;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: $bold-font-weight;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $main-dark-color;
+
+    @media screen and (min-width: $tablet) {
+      text-align: left;
+    }
+  }
+
+  &__content {
+    margin: 0;
+    line-height: 1.71;
+  }
+}

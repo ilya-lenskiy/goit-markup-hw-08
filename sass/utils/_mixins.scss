@@ -1,0 +1,13 @@
+@mixin animation($type...) {
+  transition-property: $type;
+  transition-duration: $time-animation;
+  transition-timing-function: $timing-function;
+}
+
+@mixin logo-colorizing($color) {
+  color: $color;
+}
+
+@mixin bordered($color) {
+  border: 1px solid $color;
+}

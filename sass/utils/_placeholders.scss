@@ -1,0 +1,83 @@
+%logo {
+  display: inline-block;
+  font-family: $sec-font-family;
+  font-weight: $bold-font-weight;
+  font-size: 24px;
+  line-height: 1.17;
+
+  color: $accent;
+}
+
+%hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: $main-white-color;
+  font-weight: $font-weight900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+%visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+%centering {
+  justify-content: center;
+  align-items: center;
+}
+
+%button {
+  display: flex;
+  @extend %centering;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+
+  font-weight: $bold-font-weight;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background-color: $accent;
+  color: $main-white-color;
+  box-shadow: $btn-shadow;
+
+  border-radius: $border-radius-btn;
+  border: transparent;
+  cursor: pointer;
+}
+
+%button-hover {
+  background-color: $main-white-color;
+  color: $accent;
+}
+
+%label__name {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $second-dark-color;
+}
+
+%footer-label {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.14;
+  font-size: 14;
+  font-weight: $bold-font-weight;
+  color: $main-white-color;
+  text-transform: uppercase;
+}

@@ -1,0 +1,126 @@
+.mob-nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 60px 40px 80px;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background-color: $main-white-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 1;
+    }
+  }
+  @media screen and (min-width: 415px) and (max-width: 550px) {
+    padding-left: 60px;
+  }
+  @media screen and (min-width: 551px) and (max-width: 767px) {
+    padding-left: 100px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__list {
+    font-size: 30px;
+    // margin-bottom: 150px;
+
+    @media screen and (max-width: 400px) {
+      font-size: 25px;
+      // margin-bottom: 90px;
+    }
+  }
+
+  &__list,
+  &__contacts-list,
+  &__socials-list {
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
+
+  &__item:not(:last-child),
+  &__contacts-link:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    color: $main-dark-color;
+    // @include animation(color);
+  }
+  &__link--current {
+    color: $accent;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent;
+  }
+
+  &__contacts-list {
+    // margin-bottom: 35px;
+  }
+
+  &__contacts-tel {
+    font-size: 25px;
+    color: $accent;
+    @include animation(color);
+
+    @media screen and (min-width: 480px) {
+      font-size: 34px;
+    }
+  }
+  &__contacts-tel:hover,
+  &__contacts-tel:focus,
+  &__contacts-mail:hover,
+  &__contacts-mail:focus {
+    color: rgb(255, 166, 0);
+  }
+
+  &__contacts-mail {
+    font-size: 20px;
+    color: $second-dark-color;
+  }
+
+  &__socials-list {
+    display: flex;
+  }
+
+  &__socials-item:not(:last-child) {
+    @media screen and (max-width: 479px) {
+      padding-right: 5px;
+      margin-right: 5px;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+    @media screen and (min-width: 480px) {
+      padding-right: 10px;
+      margin-right: 10px;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+
+  &__socials-link {
+    color: $accent;
+
+    @media screen and (max-width: 479px) {
+      font-size: 12px;
+    }
+    font-size: 18px;
+    line-height: 1.22;
+    // @include animation(color)
+  }
+
+  &__socials-link:hover,
+  &__socials-link:focus {
+    color: #ec780c;
+  }
+}

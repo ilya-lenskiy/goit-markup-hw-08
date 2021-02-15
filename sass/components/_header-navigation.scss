@@ -1,0 +1,133 @@
+.site-nav,
+.auth-nav {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    padding: 0;
+    margin-left: 88px;
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-left: 93px;
+    }
+  }
+}
+.site-nav__link {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $main-dark-color;
+    @include animation(color);
+
+    &:hover,
+    &:focus {
+      color: $accent;
+      outline: transparent;
+    }
+
+    &--current {
+      position: relative;
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      color: $accent;
+    }
+
+    &--current::after {
+      content: '';
+
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $accent;
+      border-radius: 2px;
+    }
+  }
+}
+
+.auth-nav {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: auto;
+
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    // align-items: center;
+
+    &__item:not(:last-child) {
+      margin-bottom: 0;
+    }
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.auth-nav__list {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-left: auto;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.auth-nav__link {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: $second-dark-color;
+
+    @include animation(color);
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+.auth-nav__icon {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: inline-block;
+    margin-right: 9px;
+    fill: currentColor;
+    @include animation(fill);
+  }
+}

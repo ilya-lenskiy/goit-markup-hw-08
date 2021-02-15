@@ -1,0 +1,52 @@
+.nav-portfolio {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    margin-bottom: -15px + 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &__list {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__list:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__btn {
+    @extend %button;
+    width: auto;
+    height: auto;
+    padding: 6px 22px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    background-color: $light-background;
+    color: $main-dark-color;
+    box-shadow: none;
+    border-radius: $border-radius-btn;
+    border: transparent;
+    outline: transparent;
+    cursor: pointer;
+
+    @include animation(color, background, box-shadow);
+  }
+
+  &__btn:hover {
+    background-color: $accent;
+    color: $main-white-color;
+    box-shadow: $btn-shadow;
+  }
+}

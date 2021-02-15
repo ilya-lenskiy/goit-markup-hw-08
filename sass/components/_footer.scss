@@ -1,0 +1,55 @@
+.footer {
+  @extend .section;
+  background: $dark-background;
+}
+
+.adaptive-footer {
+  &__address {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 9px;
+    }
+  }
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.71;
+  }
+}
+
+.adaptive-footer__street {
+  margin-bottom: 8px;
+  font-style: normal;
+  line-height: 1.71;
+  color: $main-white-color;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 9px;
+  }
+}
+
+.adaptive-footer {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+}

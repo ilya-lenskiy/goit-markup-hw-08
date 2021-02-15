@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container-header">
+        <nav class="header__nav">
+          <a class="logo-web" href="index.html"
+            >Web<span class="logo-studio">Studio</span>
+          </a>
+          <button
+            type="button"
+            class="header-button"
+            data-header-button
+            aria-controls="mob-nav"
+            aria-expanded="false"
+          >
+            <svg
+              class="header-icon"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+              <use
+                class="icon-cross"
+                href="./images/sprite.svg#icon-close"
+              ></use>
+            </svg>
+          </button>
+
+          <div class="mob-nav" id="mob-nav" data-menu>
+            <ul class="mob-nav__list">
+              <li class="mob-nav__item">
+                <a class="mob-nav__link" href="./index.html">Студия</a>
+              </li>
+              <li class="mob-nav__item">
+                <a class="mob-nav__link--current" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mob-nav__item">
+                <a class="mob-nav__link" href="#">Контакты</a>
+              </li>
+            </ul>
+
+            <div class="mob-nav__contacts">
+              <ul class="mob-nav__contacts-list">
+                <li class="mob-nav__contacts-link">
+                  <a class="mob-nav__contacts-tel" href="tel:380961111111">
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-nav__contacts-link">
+                  <a
+                    class="mob-nav__contacts-mail"
+                    href="mailto:info@devstudio.com"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="mob-nav__socials">
+              <ul class="mob-nav__socials-list">
+                <li class="mob-nav__socials-item">
+                  <a href="" class="mob-nav__socials-link">Instagram</a>
+                </li>
+                <li class="mob-nav__socials-item">
+                  <a href="" class="mob-nav__socials-link">Twitter</a>
+                </li>
+                <li class="mob-nav__socials-item">
+                  <a href="" class="mob-nav__socials-link">Facebook</a>
+                </li>
+                <li class="mob-nav__socials-item">
+                  <a href="" class="mob-nav__socials-link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="site-nav">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="./index.html">Студия</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link--current" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="auth-nav">
+          <ul class="auth-nav__list">
+            <li class="auth-nav__item">
+              <a class="auth-nav__link" href="mailto:info@devstudio.com">
+                <svg class="auth-nav__icon" width="14" height="14">
+                  <use href="./images/sprite.svg#icon-mail"></use></svg
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="auth-nav__item">
+              <a class="auth-nav__link" href="tel:380961111111">
+                <svg class="auth-nav__icon" width="15" height="15">
+                  <use href="./images/sprite.svg#icon-smartphone"></use></svg
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title--hidden">Портфолио</h2>
+          <ul class="nav-portfolio">
+            <li class="nav-portfolio__list">
+              <button type="button" class="nav-portfolio__btn">Все</button>
+            </li>
+            <li class="nav-portfolio__list">
+              <button type="button" class="nav-portfolio__btn">
+                Веб-сайты
+              </button>
+            </li>
+            <li class="nav-portfolio__list">
+              <button type="button" class="nav-portfolio__btn">
+                Приложения
+              </button>
+            </li>
+            <li class="nav-portfolio__list">
+              <button type="button" class="nav-portfolio__btn">Дизайн</button>
+            </li>
+            <li class="nav-portfolio__list">
+              <button type="button" class="nav-portfolio__btn">
+                Маркетинг
+              </button>
+            </li>
+          </ul>
+
+          <ul class="gallery">
+            <li class="gallery__item">
+              <a class="gallery__link" href="">
+                <div class="gallery__thumb">
+                  <div class="gallery__overlay">
+                    <p class="gallery__content">
+                      Технокряк это современная площадка распространения
+                      счастья. Компании используют платформу для цифрового
+                      шпионажа и атак на защищенные сервера конкурентов.
+                    </p>
+                  </div>
+
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/tehnohriak/img@1x450.jpg   450w,
+                        ./images/projects/tehnohriak/img@2x900.jpg   900w,
+                        ./images/projects/tehnohriak/img@3x1350.jpg 1350w
+                      "
+                      type="image/jpg"
+                      media="(max-width: 767px)"
+                      sizes="767px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/projects/tehnohriak-desk/img@1x370.jpg   370w,
+                        ./images/projects/tehnohriak-desk/img@2x740.jpg   740w,
+                        ./images/projects/tehnohriak-desk/img@3x1110.jpg 1110w
+                      "
+                      type="image/jpg"
+                      media="(min-width: 1200px)"
+                      sizes="1200px"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/projects/tehnohriak-tablet/img@1x354.jpg   354w,
+                        ./images/projects/tehnohriak-tablet/img@2x708.jpg   708w,
+                        ./images/projects/tehnohriak-tablet/img@3x1062.jpg 1062w
+                      "
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw, 100vw"
+                      src="./images/projects/tehnohriak-tablet/img@1x.jpg"
+                      alt="Ноутбук с открытой страницой сайта с карточками сотрудников"
+                      class="gallery__image"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__box">
+                  <h3 class="gallery__title">Технокряк</h3>
+                  <p class="gallery__description">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="gallery__item">
+              <a class="gallery__link" href="">
+                <div class="gallery__thumb">
+                  <div class="gallery__overlay">
+                    <p class="gallery__content">
+                      New Orlean vs Golden Star это современная площадка
+                      распространения счастья. Компании используют платформу для
+                      цифрового шпионажа и атак на защищенные сервера
+                      конкурентов.
+                    </p>
+                  </div>
+
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/poster/img@1x450.jpg   450w,
+                        ./images/projects/poster/img@2x900.jpg   900w,
+                        ./images/projects/poster/img@3x1350.jpg 1350w
+                      "
+                      type="image/jpg"
+                      media="(max-width: 767px)"
+                      sizes="767px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/projects/poster-desk/img@1x370.jpg   370w,
+                        ./images/projects/poster-desk/img@2x740.jpg   740w,
+                        ./images/projects/poster-desk/img@3x1110.jpg 1110w
+                      "
+                      type="image/jpg"
+                      media="(min-width: 1200px)"
+                      sizes="1200px"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/projects/poster-tablet/img@1x354.jpg   354w,
+                        ./images/projects/poster-tablet/img@2x708.jpg   708w,
+                        ./images/projects/poster-tablet/img@3x1062.jpg 1062w
+                      "
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw, 100vw"
+                      src="./images/projects/poster-tablet/img@1x.jpg"
+                      alt="Двое мужчин, играющих в баскетбол за разные команды, борятся за мяч"
+                      class="gallery__image"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__box">
+                  <h3 class="gallery__title">
+                    Постер New Orlean vs Golden Star
+                  </h3>
+                  <p class="gallery__description">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__link" href="">
+                <div class="gallery__thumb">
+                  <div class="gallery__overlay">
+                    <p class="gallery__content">
+                      Ресторан Seafood это современная площадка распространения
+                      счастья. Компании используют платформу для цифрового
+                      шпионажа и атак на защищенные сервера конкурентов.
+                    </p>
+                  </div>
+
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/seafood/img@1x450.jpg   450w,
+                        ./images/projects/seafood/img@2x900.jpg   900w,
+                        ./images/projects/seafood/img@3x1350.jpg 1350w
+                      "
+                      type="image/jpg"
+                      media="(max-width: 767px)"
+                      sizes="767px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/projects/seafood-desk/img@1x370.jpg   370w,
+                        ./images/projects/seafood-desk/img@2x740.jpg   740w,
+                        ./images/projects/seafood-desk/img@3x1110.jpg 1110w
+                      "
+                      type="image/jpg"
+                      media="(min-width: 1200px)"
+                      sizes="1200px"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/projects/seafood-tablet/img@1x354.jpg   354w,
+                        ./images/projects/seafood-tablet/img@2x708.jpg   708w,
+                        ./images/projects/seafood-tablet/img@3x1062.jpg 1062w
+                      "
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw, 100vw"
+                      src="./images/projects/seafood-tablet/img@1x.jpg"
+                      alt="Полупрозрачная рыба на фоне надписи"
+                      class="gallery__image"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__box">
+                  <h3 class="gallery__title">Ресторан Seafood</h3>
+                  <p class="gallery__description">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__link" href="">
+                <div class="gallery__thumb">
+                  <div class="gallery__overlay">
+                    <p class="gallery__content">
+                      Проект Prime это современная площадка распространения
+                      счастья. Компании используют платформу для цифрового
+                      шпионажа и атак на защищенные сервера конкурентов.
+                    </p>
+                  </div>
+
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/prime/img@1x450.jpg   450w,
+                        ./images/projects/prime/img@2x900.jpg   900w,
+                        ./images/projects/prime/img@3x1350.jpg 1350w
+                      "
+                      type="image/jpg"
+                      media="(max-width: 767px)"
+                      sizes="767px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/projects/prime-desk/img@1x370.jpg   370w,
+                        ./images/projects/prime-desk/img@2x740.jpg   740w,
+                        ./images/projects/prime-desk/img@3x1110.jpg 1110w
+                      "
+                      type="image/jpg"
+                      media="(min-width: 1200px)"
+                      sizes="1200px"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/projects/prime-tablet/img@1x354.jpg   354w,
+                        ./images/projects/prime-tablet/img@2x708.jpg   708w,
+                        ./images/projects/prime-tablet/img@3x1062.jpg 1062w
+                      "
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw, 100vw"
+                      src="./images/projects/prime-tablet/img@1x.jpg"
+                      alt="Большие наушники"
+                      class="gallery__image"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__box">
+                  <h3 class="gallery__title">Проект Prime</h3>
+                  <p class="gallery__description">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__link" href="">
+                <div class="gallery__thumb">
+                  <div class="gallery__overlay">
+                    <p class="gallery__content">
+                      Проект Boxes это современная площадка распространения
+                      счастья. Компании используют платформу для цифрового
+                      шпионажа и атак на защищенные сервера конкурентов.
+                    </p>
+                  </div>
+
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/boxes/img@1x450.jpg   450w,
+                        ./images/projects/boxes/img@2x900.jpg   900w,
+                        ./images/projects/boxes/img@3x1350.jpg 1350w
+                      "
+                      type="image/jpg"
+                      media="(max-width: 767px)"
+                      sizes="767px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/projects/boxes-desk/img@1x370.jpg   370w,
+                        ./images/projects/boxes-desk/img@2x740.jpg   740w,
+                        ./images/projects/boxes-desk/img@3x1110.jpg 1110w
+                      "
+                      type="image/jpg"
+                      media="(min-width: 1200px)"
+                      sizes="1200px"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/projects/boxes-tablet/img@1x354.jpg   354w,
+                        ./images/projects/boxes-tablet/img@2x708.jpg   708w,
+                        ./images/projects/boxes-tablet/img@3x1062.jpg 1062w
+                      "
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw, 100vw"
+                      src="./images/projects/boxes-tablet/img@1x.jpg"
+                      alt="Две коробки - большая и маленькая"
+                      class="gallery__image"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__box">
+                  <h3 class="gallery__title">Проект Boxes</h3>
+                  <p class="gallery__description">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__link" href="">
+                <div class="gallery__thumb">
+                  <div class="gallery__overlay">
+                    <p class="gallery__content">
+                      Inspiration это современная площадка распространения
+                      счастья. Компании используют платформу для цифрового
+                      шпионажа и атак на защищенные сервера конкурентов.
+                    </p>
+                  </div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/inspiration/img@1x450.jpg   450w,
+                        ./images/projects/inspiration/img@2x900.jpg   900w,
+                        ./images/projects/inspiration/img@3x1350.jpg 1350w
+                      "
+                      type="image/jpg"
+                      media="(max-width: 767px)"
+                      sizes="767px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/projects/inspiration-desk/img@1x370.jpg   370w,
+                        ./images/projects/inspiration-desk/img@2x740.jpg   740w,
+                        ./images/projects/inspiration-desk/img@3x1110.jpg 1110w
+                      "
+                      type="image/jpg"
+                      media="(min-width: 1200px)"
+                      sizes="1200px"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/projects/inspiration-tablet/img@1x354.jpg   354w,
+                        ./images/projects/inspiration-tablet/img@2x708.jpg   708w,
+                        ./images/projects/inspiration-tablet/img@3x1062.jpg 1062w
+                      "
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw, 100vw"
+                      src="./images/projects/inspiration-tablet/img@1x.jpg"
+                      alt="Компьютер с открытой страницой сайта с изображением карты"
+                      class="gallery__image"
+                    />
+                  </picture>
+                </div>
+
+                <div class="gallery__box">
+                  <h3 class="gallery__title">Inspiration has no Borders</h3>
+                  <p class="gallery__description">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__link" href="">
+                <div class="gallery__thumb">
+                  <div class="gallery__overlay">
+                    <p class="gallery__content">
+                      Издание Limited Edition это современная площадка
+                      распространения счастья. Компании используют платформу для
+                      цифрового шпионажа и атак на защищенные сервера
+                      конкурентов.
+                    </p>
+                  </div>
+
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/limited-edition/img@1x450.jpg   450w,
+                        ./images/projects/limited-edition/img@2x900.jpg   900w,
+                        ./images/projects/limited-edition/img@3x1350.jpg 1350w
+                      "
+                      type="image/jpg"
+                      media="(max-width: 767px)"
+                      sizes="767px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/projects/limited-edition-desk/img@1x370.jpg   370w,
+                        ./images/projects/limited-edition-desk/img@2x740.jpg   740w,
+                        ./images/projects/limited-edition-desk/img@3x1110.jpg 1110w
+                      "
+                      type="image/jpg"
+                      media="(min-width: 1200px)"
+                      sizes="1200px"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/projects/limited-edition-tablet/img@1x354.jpg   354w,
+                        ./images/projects/limited-edition-tablet/img@2x708.jpg   708w,
+                        ./images/projects/limited-edition-tablet/img@3x1062.jpg 1062w
+                      "
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw, 100vw"
+                      src="./images/projects/limited-edition-tablet/img@1x.jpg"
+                      alt="Открытая книга с изображениями женщин надписью ограниченный выпуск"
+                      class="gallery__image"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__box">
+                  <h3 class="gallery__title">Издание Limited Edition</h3>
+                  <p class="gallery__description">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__link" href="">
+                <div class="gallery__thumb">
+                  <div class="gallery__overlay">
+                    <p class="gallery__content">
+                      Проект LAB это современная площадка распространения
+                      счастья. Компании используют платформу для цифрового
+                      шпионажа и атак на защищенные сервера конкурентов.
+                    </p>
+                  </div>
+
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/lab/img@1x450.jpg   450w,
+                        ./images/projects/lab/img@2x900.jpg   900w,
+                        ./images/projects/lab/img@3x1350.jpg 1350w
+                      "
+                      type="image/jpg"
+                      media="(max-width: 767px)"
+                      sizes="767px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/projects/lab-desk/img@1x370.jpg   370w,
+                        ./images/projects/lab-desk/img@2x740.jpg   740w,
+                        ./images/projects/lab-desk/img@3x1110.jpg 1110w
+                      "
+                      type="image/jpg"
+                      media="(min-width: 1200px)"
+                      sizes="1200px"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/projects/lab-tablet/img@1x354.jpg   354w,
+                        ./images/projects/lab-tablet/img@2x708.jpg   708w,
+                        ./images/projects/lab-tablet/img@3x1062.jpg 1062w
+                      "
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw, 100vw"
+                      src="./images/projects/lab-tablet/img@1x.jpg"
+                      alt="Бирка з надписью Lab el tag в PSD макете"
+                      class="gallery__image"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__box">
+                  <h3 class="gallery__title">Проект LAB</h3>
+                  <p class="gallery__description">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__link" href="">
+                <div class="gallery__thumb">
+                  <div class="gallery__overlay">
+                    <p class="gallery__content">
+                      Growing Business это современная площадка распространения
+                      счастья. Компании используют платформу для цифрового
+                      шпионажа и атак на защищенные сервера конкурентов.
+                    </p>
+                  </div>
+
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/growing-business/img@1x450.jpg   450w,
+                        ./images/projects/growing-business/img@2x900.jpg   900w,
+                        ./images/projects/growing-business/img@3x1350.jpg 1350w
+                      "
+                      type="image/jpg"
+                      media="(max-width: 767px)"
+                      sizes="767px"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/projects/growing-business-desk/img@1x370.jpg   370w,
+                        ./images/projects/growing-business-desk/img@2x740.jpg   740w,
+                        ./images/projects/growing-business-desk/img@3x1110.jpg 1110w
+                      "
+                      type="image/jpg"
+                      media="(min-width: 1200px)"
+                      sizes="1200px"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/projects/growing-business-tablet/img@1x354.jpg   354w,
+                        ./images/projects/growing-business-tablet/img@2x708.jpg   708w,
+                        ./images/projects/growing-business-tablet/img@3x1062.jpg 1062w
+                      "
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw, 100vw"
+                      src="./images/projects/growing-business-tablet/img@1x.jpg"
+                      alt="Мужские руки нажимают на кнопки клавиатуры в нотбуке, в котором открыта страница с изображением мужчины с телефоном"
+                      class="gallery__image"
+                    />
+                  </picture>
+                </div>
+                <div class="gallery__box">
+                  <h3 class="gallery__title">Growing Business</h3>
+                  <p class="gallery__description">Приложение</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container-footer">
+        <div class="adaptive-footer">
+          <div class="adaptive-footer__address">
+            <a class="footer__logo-web" href="/"
+              >Web<span class="footer__logo-studio">Studio</span>
+            </a>
+            <address class="adaptive-footer__street">
+              г. Киев, пр-т Леси Украинки, 26
+            </address>
+            <address class="adaptive-footer__thumb">
+              <ul class="adaptive-footer__list">
+                <li class="adaptive-footer__item">
+                  <a
+                    class="adaptive-footer__link"
+                    href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="adaptive-footer__item">
+                  <a class="adaptive-footer__link" href="tel:380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="join-us">
+            <p class="join-us__lable">Присоединяйтесь</p>
+            <ul class="footer__social-links">
+              <li class="footer__social-links--item">
+                <a class="footer__social-links--link" href="">
+                  <svg class="social-links__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-links--item">
+                <a class="footer__social-links--link" href="">
+                  <svg class="social-links__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-links--item">
+                <a class="footer__social-links--link" href="">
+                  <svg class="social-links__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__social-links--item">
+                <a class="footer__social-links--link" href="">
+                  <svg class="social-links__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="subscribe">
+          <p class="subscribe__label">Подпишитесь на рассылку</p>
+          <form class="subscribe__field">
+            <input type="email" class="subscribe__input" placeholder="E-mail" />
+            <button class="subscribe__btn">
+              Подписаться
+              <span class="subscribe__icon">
+                <svg width="24" height="24">
+                  <use href="./images/sprite.svg#icon-send"></use>
+                </svg>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

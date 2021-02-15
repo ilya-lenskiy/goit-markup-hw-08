@@ -1,0 +1,38 @@
+.header-button {
+  display: inline-flex;
+  align-items: center;
+  z-index: 2;
+
+  padding: 0;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  color: $black-color;
+
+  @include animation(color);
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header-icon {
+  fill: currentColor;
+}
+
+.header-button .icon-cross {
+  display: none;
+}
+
+.header-button.is-open .icon-cross {
+  display: block;
+}
+
+.header-button.is-open .icon-menu {
+  display: none;
+}
